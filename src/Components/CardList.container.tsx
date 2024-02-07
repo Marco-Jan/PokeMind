@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CardList } from './CardList';
+import Toast from './Toast';
 
 
 
@@ -16,6 +17,14 @@ export const CardListContainer = () => {
     const [selectedImage] = useState<string | null>(null);
     const [highScore, setHighScore] = useState(Number(localStorage.getItem('highScore')) || 0);
     const [imageClickedTwice, setImageClickedTwice] = useState<string | null>(null);
+    const [toastMessage, setToastMessage] = useState<string>('');
+    const [toastVisible, setToastVisible] = useState<boolean>(false);
+
+    const showToast = (message: string) => {
+        setToastMessage(message);
+        setToastVisible(true);
+        setTimeout(() => setToastVisible(false), 3000);
+    }
 
 
     const handleImageClick = (image: string) => {
@@ -29,8 +38,8 @@ export const CardListContainer = () => {
             setImageClickedTwice(image); 
     
             setTimeout(() => {
-                alert("Du hast dieses Pokemon schon gewählt! Spiel wird zurückgesetzt.");
-            }, 100); 
+                showToast("Du hast dieses Pokemon schon gewählt! Spiel wird zurückgesetzt.");
+            }, 300); 
         } else {
             setPoints(points + 1);
             setChoseImages(prevImages => [...prevImages, image]);
@@ -38,6 +47,16 @@ export const CardListContainer = () => {
             setImageClickedTwice(null); 
         }
     };
+
+    useEffect(() => {
+        if (imageClickedTwice) {
+            const timer = setTimeout(() => {
+                setImageClickedTwice(null); 
+            }, 3000); 
+
+            return () => clearTimeout(timer);
+        }
+    }, [imageClickedTwice]);
     
     
     function shuffleArray<T>(array: T[]) {
@@ -68,6 +87,10 @@ export const CardListContainer = () => {
         fetchData();
     }, []);
 
-    return <CardList data={data} points={points} handleImageClick={handleImageClick} imageClickedTwice={imageClickedTwice} />;
-
+    return (
+    <>
+    <CardList data={data} points={points} handleImageClick={handleImageClick} imageClickedTwice={imageClickedTwice} />;
+    <Toast message={toastMessage} isVisible={toastVisible} />
+    </>
+    );
 };
