@@ -104,6 +104,8 @@
 }
 
 .pokemonCard {
+  width: 130px;
+  height: auto;
   border: 1px solid #9e9e9e;
   box-shadow: rgb(86, 87, 87) 0px 0px 10px 0px;
   padding: 10px;
@@ -111,7 +113,6 @@
   border-radius: 10px;
   text-align: center;
   transition: transform 0.3s ease-in-out;
-
   position: relative; 
   display: inline-block; 
   border-radius: 50%; 
@@ -126,7 +127,7 @@
   height: 100%;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
   transform: translate(-50%, -50%) scale(1.2); 
-  border-radius: 50%; 
+  border-radius: 30%; 
   z-index: -1; 
 }
 
@@ -171,14 +172,24 @@
   .logo {
     height: 15vw; 
   }
+  .dataContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    margin: 3em;
+    width: 100%;
+  }
 
   .pokemonCard {
+    width: 130px;
+    height: auto;
     padding: 5px; 
     margin: 5px; 
   }
 
   .pokemonCard img {
-    height: 80px; 
+    height: 30%; 
   }
 
   .scoreContainer, .cardContainer, .dataContainer {

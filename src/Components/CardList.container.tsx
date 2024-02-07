@@ -57,7 +57,7 @@ export const CardListContainer = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://pokeapi.co/api/v2/pokemon/?limit=25');
+                const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
                 const jsonData = await response.json();
                 setData(jsonData.results);
             } catch (error) {
