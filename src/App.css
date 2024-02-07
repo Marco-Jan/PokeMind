@@ -1,0 +1,220 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  padding: 2em;
+  border: 2px solid #646cff;
+}
+
+.logo {
+  height: 15vw;
+  padding: 0;
+  will-change: filter;
+  transition: filter 300ms;
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+
+/* .scoreContainer {
+  position: relative;
+  bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border: 2px solid #646cff;
+  border-radius: 8px;
+  max-width: fit-content;
+  margin: 1em;
+  padding: 1em;
+
+} */
+
+.scoreContainer {
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: 2px solid #f0f0f0;
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 20px;
+  margin: 20px;
+  text-align: center; 
+  backdrop-filter: blur(10px);
+}
+
+.currentScore h2 {
+  color: #333; 
+  margin: 10px 0; 
+}
+
+
+.currentScore h2:not(:first-child) {
+  border-top: 1px solid #eee;
+  padding-top: 10px; 
+}
+
+.progressBarContainer {
+  width: 100%;
+  background-color: #eee; 
+  border: 0.2em solid #ccc;
+  border-radius: 5px; 
+  margin-top: 10px; 
+  overflow: hidden; 
+}
+
+.progressBar {
+  height: 20px; 
+  background-color: #4caf50; 
+  border-radius: 5px; 
+  width: 0%; 
+  transition: width 0.5s ease-in-out; 
+}
+
+
+
+/* .cardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin: 0.5em;
+  padding: 1em;
+  
+} */
+
+
+
+.dataContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px; 
+  margin: 3em;
+  width: 100%;
+  
+}
+
+.pokemonCard {
+  border: 1px solid #9e9e9e;
+  box-shadow: rgb(86, 87, 87) 0px 0px 10px 0px;
+  padding: 10px;
+  background-color: rgb(86, 87, 87);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+
+  position: relative; 
+  display: inline-block; 
+  border-radius: 50%; 
+}
+
+.pokemonCard::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%; 
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+  transform: translate(-50%, -50%) scale(1.2); 
+  border-radius: 50%; 
+  z-index: -1; 
+}
+
+
+.pokemonCard h3 {
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  border: #4caf50 1px solid;
+  border-radius: 5px;
+  color: #646cff;
+  
+}
+.pokemonCard:hover {
+  transform: scale(1.05) rotate(5deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.pokemonCard img {
+  display: block;
+  width: 100%; 
+  height: auto;
+  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5)); 
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+  .pokemonCard {
+    width: auto;
+    max-height: 100vh;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    height: 15vw; 
+  }
+
+  .pokemonCard {
+    padding: 5px; 
+    margin: 5px; 
+  }
+
+  .pokemonCard img {
+    height: 80px; 
+  }
+
+  .scoreContainer, .cardContainer, .dataContainer {
+    padding: 10px; 
+    margin: 10px; 
+  }
+
+  .currentScore h2 {
+    font-size: 14px; 
+  }
+
+  .progressBarContainer {
+    height: 15px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .cardContainer, .dataContainer {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; 
+  }
+}
+
+
+
+
+.background {
+  width: 100vw; 
+  height: 100vh; 
+  object-fit: cover; 
+  position: fixed;
+  filter:opacity(0.5);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
+.read-the-docs {
+  color: #888;
+}
