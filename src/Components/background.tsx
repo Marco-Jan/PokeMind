@@ -4,6 +4,7 @@ export const Background = () => {
     return (
         <>
             <img src={PokeMind_Background} className="background" alt="PokeMind background" />
+            
         </>
     )
 }
