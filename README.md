@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
+# Pokemind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pokemind ist ein interaktives Pokémon-Spiel, bei dem es darum geht, sich an bereits angeklickte Pokémon zu erinnern. Ziel ist es, so viele einzigartige Pokémon wie möglich anzuklicken, ohne ein bereits geklicktes Pokémon erneut auszuwählen. Das Spiel bietet eine einfache, aber fesselnde Benutzeroberfläche und ist eine unterhaltsame Möglichkeit, dein Gedächtnis zu testen!
 
-Currently, two official plugins are available:
+## Inhaltsverzeichnis
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Technologien](#technologien)
+- [Installation](#installation)
+- [Verwendung](#verwendung)
+- [Komponenten](#komponenten)
+- [Lizenz](#lizenz)
 
-## Expanding the ESLint configuration
+## Technologien
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: Für die Benutzeroberfläche und den Komponentenaufbau.
+- **TypeScript**: Für Typisierung und Robustheit des Codes.
+- **CSS**: Für Styling der Komponenten.
+- **PokeAPI**: Zur Abrufung von Pokémon-Daten.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. **Repository klonen:**
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   git clone https://github.com/deinbenutzername/pokemind.git
+   cd pokemind
+
+2. **Abhängigkeiten installieren und initialisieren:**
+
+    npm install
+    npm init
+
+2. **ntwicklungsserver starten:**
+
+    npm run dev
+    Das Projekt wird auf http://localhost:3000 verfügbar sein.
+
+## Verwendung
+
+Beim Starten der App wird eine Liste von Pokémon angezeigt. Dein Ziel ist es, auf die Pokémon zu klicken, ohne bereits ausgewählte Pokémon erneut anzuklicken. Bei jedem erfolgreichen Klick wird dein Punktestand erhöht. Wenn du ein bereits ausgewähltes Pokémon erneut auswählst, wird das Spiel zurückgesetzt, und dein Punktestand wird auf null zurückgesetzt.
+
+## Komponenten
+
+- **`App`**: Die Hauptkomponente, die die grundlegenden Layout-Komponenten (`Header`, `CardListContainer`, `Background`) zusammenfügt.
+
+- **`CardListContainer`**: Verwaltet den Zustand des Spiels, einschließlich Punktzahl, Auswahl der Bilder und Interaktion mit der PokeAPI. Stellt die `CardList`-Komponente bereit und zeigt Toast-Nachrichten an.
+
+- **`CardList`**: Zeigt die Pokémon-Karten an und ermöglicht das Klicken auf diese. Verwaltet visuelle Hinweise wie die Hervorhebung von bereits ausgewählten Pokémon.
+
+- **`Score`**: Zeigt den aktuellen Punktestand und den Fortschritt im Vergleich zum Highscore an.
+
+- **`Toast`**: Zeigt temporäre Nachrichten zur Benutzerinteraktion an, z.B. wenn ein bereits ausgewähltes Pokémon erneut angeklickt wird.
+
+## Lizenz
+
+Dieses Projekt ist unter der MIT-Lizenz lizenziert – siehe die [LICENSE](LICENSE) Datei für Details.
