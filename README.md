@@ -32,7 +32,7 @@ Pokemind ist ein interaktives Pokémon-Spiel, bei dem es darum geht, sich an ber
 2. **ntwicklungsserver starten:**
 
     npm run dev
-    Das Projekt wird auf http://localhost:3000 verfügbar sein.
+    Das Projekt wird auf http://localhost:5173 verfügbar sein.
 
 ## Verwendung
 
