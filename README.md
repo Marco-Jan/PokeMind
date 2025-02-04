@@ -4,8 +4,7 @@
 
 ![pokemindImage](src/assets/pokemindImage.jpg)
 
-test
- 
+
 
 Pokemind ist ein interaktives Pokémon-Spiel, bei dem es darum geht, sich an bereits angeklickte Pokémon zu erinnern. Ziel ist es, so viele einzigartige Pokémon wie möglich anzuklicken, ohne ein bereits geklicktes Pokémon erneut auszuwählen. Das Spiel bietet eine einfache, aber fesselnde Benutzeroberfläche und ist eine unterhaltsame Möglichkeit, dein Gedächtnis zu testen!
 
