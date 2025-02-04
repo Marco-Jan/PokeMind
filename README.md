@@ -2,7 +2,7 @@
 
 
 <a href="https://github.com/Marco-Jan/PokeMind/">
-    <img src="src/assets/pokemindImage.jpg" alt="Logo" style="width: 100%; height:auto;">
+    <img src="/assets/pokemindImage.jpg" alt="Logo" style="width: 100%; height:auto;">
   </a>
 
 Pokemind ist ein interaktives Pokémon-Spiel, bei dem es darum geht, sich an bereits angeklickte Pokémon zu erinnern. Ziel ist es, so viele einzigartige Pokémon wie möglich anzuklicken, ohne ein bereits geklicktes Pokémon erneut auszuwählen. Das Spiel bietet eine einfache, aber fesselnde Benutzeroberfläche und ist eine unterhaltsame Möglichkeit, dein Gedächtnis zu testen!
